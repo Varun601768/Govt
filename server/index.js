@@ -20,7 +20,7 @@ app.use(cors({
 app.use(express.json());
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/hospital-management';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://username:4vp23mc033@cluster.mongodb.net/hospital-management';
 
 mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
   .then(() => console.log('Connected to MongoDB'))
