@@ -1,0 +1,171 @@
+{
+  "common": {
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+    "error": "ದೋಷ",
+    "save": "ಉಳಿಸಿ",
+    "cancel": "ದ್ದುಮಾಡಿ",
+    "edit": "ಸಂಪಾದಿಸಿ",
+    "delete": "ಅಳಿಸಿ",
+    "add": "ಸೇರಿಸಿ",
+    "search": "ಹುಡುಕಿ",
+    "filter": "ಫಿಲ್ಟರ್",
+    "back": "ಹಿಂದೆ",
+    "next": "ಮುಂದೆ",
+    "previous": "ಹಿಂದಿನ",
+    "submit": "ಸಲ್ಲಿಸಿ",
+    "close": "ಮುಚ್ಚಿ",
+    "view": "ವೀಕ್ಷಿಸಿ",
+    "details": "ವಿವರಗಳು",
+    "doctors": "ವೈದ್ಯರು",
+    "timings": "ಸಮಯಗಳು",
+    "departments": "ವಿಭಾಗಗಳು",
+    "location": "ಸ್ಥಳ",
+    "phone": "ದೂರವಾಣಿ",
+    "email": "ಇಮೇಲ್",
+    "address": "ವಿಳಾಸ",
+    "emergency": "ತುರ್ತ"
+  },
+  "navigation": {
+    "home": "ಮುಖಪುಟ",
+    "hospitals": "ಆಸ್ಪತ್ರೆಗಳು",
+    "doctors": "ವೈದ್ಯರು",
+    "timings": "ಸಮಯಗಳು",
+    "admin": "ನಿರ್ವಾಹಕ",
+    "feedback": "ಪ್ರತಿಕ್ರಿಯೆ",
+    "language": "ಭಾಷೆ"
+  },
+  "home": {
+    "title": "ಸರ್ಕಾರಿ ಆರೋಗ್ಯ ಪೋರ್ಟಲ್",
+    "subtitle": "ಕರ್ನಾಟಕದ ಡಿಜಿಟಲ್ ಆರೋಗ್ಯ ನೆಟ್ವರ್ಕ್",
+    "description": "ಕರ್ನಾಟಕದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ ನೆಟ್ವರ್ಕ್‌ನಲ್ಲಿ ಸಂಪೂರ್ಣ ಆರೋಗ್ಯ ಸೇವೆಗಳನ್ನು ಪ್ರವೇಶಿಸಿ",
+    "features": {
+      "hospitals": "ಹತ್ತಿರದ ಆಸ್ಪತ್ರೆಯನ್ನು ಹುಡುಕಿ",
+      "doctors": "ಅರ್ಹ ವೈದ್ಯರನ್ನು ಹುಡುಕಿ",
+      "timings": "OPD ಸಮಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+      "feedback": "ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ"
+    }
+  },
+  "hospitals": {
+    "title": "ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಗಳು",
+    "subtitle": "ಕರ್ನಾಟಕದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ ನೆಟ್ವರ್ಕ್‌ನಲ್ಲಿ ಸಂಪೂರ್ಣ ಆರೋಗ್ಯ ಸೇವೆಗಳು",
+    "listTitle": "ಆಸ್ಪತ್ರೆ ಪಟ್ಟಿ",
+    "filterTaluk": "ತಾಲ್ಲೂಕು ಆಧರಿಸಿ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "allTaluks": "ಎಲ್ಲಾ ತಾಲ್ಲೂಕುಗಳು",
+    "taluks": {
+      "mangaluru": "ಮಂಗಳೂರು ತಾಲ್ಲೂಕು",
+      "bantwal": "ಬಂಟ್ವಾಲ್ ತಾಲ್ಲೂಕು",
+      "puttur": "ಪುತ್ತೂರು ತಾಲ್ಲೂಕು",
+      "sullia": "ಸುಳ್ಯ ತಾಲ್ಲೂಕು",
+      "belthangady": "ಬೆಳ್ತಂಗಡಿ ತಾಲ್ಲೂಕು",
+      "kadaba": "ಕಾಡಬಾ ತಾಲ್ಲೂಕು",
+      "mulki": "ಮುಲ್ಕಿ ತಾಲ್ಲೂಕು"
+    },
+    "viewDoctors": "ವೈದ್ಯರನ್ನು ವೀಕ್ಷಿಸಿ",
+    "checkTimings": "ಸಮಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+    "doctorsAvailable": "ಲಭ್ಯವಿರುವ ವೈದ್ಯರು",
+    "departmentsCount": "ವಿಭಾಗಗಳು"
+  },
+  "hospitalDetail": {
+    "backToHospitals": "ಆಸ್ಪತ್ರೆಗಳಿಗೆ ಹಿಂದೆ",
+    "hospitalInfo": "ಆಸ್ಪತ್ರೆ ಮಾಹಿತಿ",
+    "availableDepartments": "ಲಭ್ಯವಿರುವ ವಿಭಾಗಗಳು",
+    "locationDirections": "ಸ್ಥಳ ಮತ್ತು ದಿಕ್ಕುಗಳು",
+    "findUsEasily": "ನಮ್ಮ ಆಸ್ಪತ್ರೆಗೆ ನಿಖರವಾದ ದಿಕ್ಕುಗಳಿಗಾಗಿ ಮೇಲಿನ ಸಂವಾದಾತ್ಮಕ ನಕ್ಷೆಯನ್ನು ಬಳಸಿ ಸುಲಭವಾಗಿ ನಮ್ಮನ್ನು ಹುಡುಕಿ.",
+    "openInMaps": "ನಕ್ಷೆಗಳಲ್ಲಿ ತೆರೆಯಿರಿ",
+    "quickActions": "ತ್ವರಿತ ಕ್ರಮಗಳು",
+    "emergencyInfo": "ತುರ್ತ್ ಮಾಹಿತಿ",
+    "emergencyCall": "ತುರ್ತ್ ಸೇವೆಗಳಿಗೆ, ದಯವಿಟ್ಟು ಕರೆ ಮಾಡಿ:",
+    "doctorsAvailable": "ಲಭ್ಯವಿರುವ ವೈದ್ಯರು",
+    "departments": "ವಿಭಾಗಗಳು",
+    "emergencyServices": "ತುರ್ತ್ ಸೇವೆಗಳು"
+  },
+  "doctors": {
+    "title": "ಸರ್ಕಾರಿ ವೈದ್ಯರು",
+    "subtitle": "ಕರ್ನಾಟಕದ ಆರೋಗ್ಯ ನೆಟ್ವರ್ಕ್‌ನಲ್ಲಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿರುವ ಅರ್ಹ ವೈದ್ಯಕೀಯ ವೃತ್ತಿಪರರು",
+    "filterByHospital": "ಆಸ್ಪತ್ರೆ ಆಧರಿಸಿ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "filterByDepartment": "ವಿಭಾಗ ಆಧರಿಸಿ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "allHospitals": "ಎಲ್ಲಾ ಆಸ್ಪತ್ರೆಗಳು",
+    "allDepartments": "ಎಲ್ಲಾ ವಿಭಾಗಗಳು",
+    "experience": "ವರ್ಷಗಳ ಅನುಭವ",
+    "qualification": "ಅರ್ಹತೆ",
+    "specialization": "ವಿಶೇಷತೆ",
+    "opdDays": "OPD ದಿನಗಳು"
+  },
+  "timings": {
+    "title": "ಆಸ್ಪತ್ರೆ ಸಮಯಗಳು",
+    "subtitle": "ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ OPD ವೇಳಾಪಟ್ಟಿ ಮತ್ತು ಲಭ್ಯತೆ",
+    "filterByHospital": "ಆಸ್ಪತ್ರೆ ಆಧರಿಸಿ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "allHospitals": "ಎಲ್ಲಾ ಆಸ್ಪತ್ರೆಗಳು",
+    "selectDoctor": "ವೈದ್ಯರನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "availableSlots": "ಲಭ್ಯವಿರುವ ಸ್ಲಾಟ್‌ಗಳು",
+    "bookAppointment": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
+    "timeSlot": "ಸಮಯ ಸ್ಲಾಟ್",
+    "type": "ಪ್ರಕಾರ",
+    "available": "ಲಭ್ಯ"
+  },
+  "admin": {
+    "login": "ನಿರ್ವಾಹಕ ಲಾಗಿನ್",
+    "username": "ಬಳಕೆದಾರಹೆಸರು",
+    "password": "ಪಾಸ್‌ವರ್ಡ್",
+    "loginButton": "ಲಾಗಿನ್",
+    "logout": "ಲಾಗ್‌ಔಟ್",
+    "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "account": "ಖಾತೆ",
+    "manageHospitals": "ಆಸ್ಪತ್ರೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
+    "manageDoctors": "ವೈದ್ಯರನ್ನು ನಿರ್ವಹಿಸಿ",
+    "manageSchedules": "ವೇಳಾಪಟ್ಟಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
+    "manageFeedback": "ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಿರ್ವಹಿಸಿ",
+    "addHospital": "ಆಸ್ಪತ್ರೆಯನ್ನು ಸೇರಿಸಿ",
+    "addDoctor": "ವೈದ್ಯರನ್ನು ಸೇರಿಸಿ",
+    "addSchedule": "ವೇಳಾಪಟ್ಟಿಯನ್ನು ಸೇರಿಸಿ",
+    "dashboardStats": {
+      "totalHospitals": "ಒಟ್ಟು ಆಸ್ಪತ್ರೆಗಳು",
+      "totalDoctors": "ಒಟ್ಟು ವೈದ್ಯರು",
+      "totalFeedback": "ಒಟ್ಟು ಪ್ರತಿಕ್ರಿಯೆ",
+      "registeredDoctors": "ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ನೋಂದಾಯಿಸಿದ ವೈದ್ಯರು",
+      "hospitalsAvailable": "ನೆಟ್ವರ್ಕ್‌ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಆಸ್ಪತ್ರೆಗಳು",
+      "citizenFeedback": "ನಾಗರಿಕರ ಪ್ರತಿಕ್ರಿಯೆ ಸಲ್ಲಿಕೆಗಳು"
+    },
+    "hospitalForm": {
+      "name": "ಹೆಸರು",
+      "location": "ಸ್ಥಳ",
+      "taluk": "ತಾಲ್ಲೂಕು",
+      "selectTaluk": "ತಾಲ್ಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "phone": "ದೂರವಾಣಿ",
+      "email": "ಇಮೇಲ್",
+      "address": "ವಿಳಾಸ",
+      "departments": "ವಿಭಾಗಗಳು (ಅಲ್ಪವಿರಾಮದಿಂದ ಬೇರ್ಪಡಿಸಿ)",
+      "departmentsPlaceholder": "ಹೃದಯಶಾಸ್ತ್ರ, ಪೀಡಿಯಾಟ್ರಿಕ್ಸ್, ಆರ್ಥೋಪೆಡಿಕ್ಸ್",
+      "emergencyNumber": "ತುರ್ತ್ ಸಂಖ್ಯೆ",
+      "imageUrl": "ಚಿತ್ರ URL",
+      "mapEmbedUrl": "ನಕ್ಷೆ ಎಂಬೆಡ್ URL (ಐಚ್ಛಿಕ)",
+      "mapPlaceholder": "ಗೂಗಲ್ ನಕ್ಷೆಗಳ ಎಂಬೆಡ್‌ನಿಂದ iframe src ಅಂಟಿಸಿ"
+    },
+    "doctorForm": {
+      "name": "ಹೆಸರು",
+      "department": "ವಿಭಾಗ",
+      "qualification": "ಅರ್ಹತೆ",
+      "experience": "ಅನುಭವ (ವರ್ಷಗಳು)",
+      "hospital": "ಆಸ್ಪತ್ರೆ",
+      "phone": "ದೂರವಾಣಿ",
+      "email": "ಇಮೇಲ್",
+      "specialization": "ವಿಶೇಷತೆ (ಅಲ್ಪವಿರಾಮದಿಂದ ಬೇರ್ಪಡಿಸಿ)",
+      "opdDays": "OPD ದಿನಗಳು (ಅಲ್ಪವಿರಾಮದಿಂದ ಬೇರ್ಪಡಿಸಿ)",
+      "imageUrl": "ಚಿತ್ರ URL"
+    }
+  },
+  "feedback": {
+    "title": "ಪ್ರತಿಕ್ರಿಯೆ",
+    "subtitle": "ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಸಹಾಯ ಮಾಡಿ",
+    "name": "ಹೆಸರು",
+    "subject": "ವಿಷಯ",
+    "message": "ಸಂದೇಶ",
+    "submitFeedback": "ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸಲ್ಲಿಸಿ",
+    "thankYou": "ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಗಾಗಿ ಧನ್ಯವಾದಗಳು!",
+    "error": "ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸಲ್ಲಿಸುವಲ್ಲಿ ದೋಷ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+  },
+  "footer": {
+    "copyright": "© 2024 ಸರ್ಕಾರಿ ಆರೋಗ್ಯ ಪೋರ್ಟಲ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲ್ಪಟ್ಟಿವೆ.",
+    "description": "ಕರ್ನಾಟಕ ಸರ್ಕಾರಿ ಆರೋಗ್ಯ ಸೇವೆಗಳು"
+  }
+}

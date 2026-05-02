@@ -1,0 +1,171 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "view": "View",
+    "details": "Details",
+    "doctors": "Doctors",
+    "timings": "Timings",
+    "departments": "Departments",
+    "location": "Location",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "emergency": "Emergency"
+  },
+  "navigation": {
+    "home": "Home",
+    "hospitals": "Hospitals",
+    "doctors": "Doctors",
+    "timings": "Timings",
+    "admin": "Admin",
+    "feedback": "Feedback",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Government Healthcare Portal",
+    "subtitle": "Karnataka's Digital Healthcare Network",
+    "description": "Access comprehensive healthcare services across Karnataka's government hospital network",
+    "features": {
+      "hospitals": "Find Nearest Hospital",
+      "doctors": "Find Qualified Doctors",
+      "timings": "Check OPD Timings",
+      "feedback": "Share Your Feedback"
+    }
+  },
+  "hospitals": {
+    "title": "Government Hospitals",
+    "subtitle": "Comprehensive healthcare services across Karnataka's government hospital network",
+    "listTitle": "Hospital List",
+    "filterTaluk": "Filter by Taluk",
+    "allTaluks": "All Taluks",
+    "taluks": {
+      "mangaluru": "Mangaluru Taluk",
+      "bantwal": "Bantwal Taluk",
+      "puttur": "Puttur Taluk",
+      "sullia": "Sullia Taluk",
+      "belthangady": "Belthangady Taluk",
+      "kadaba": "Kadaba Taluk",
+      "mulki": "Mulki Taluk"
+    },
+    "viewDoctors": "View Doctors",
+    "checkTimings": "Check Timings",
+    "doctorsAvailable": "Doctors Available",
+    "departmentsCount": "Departments"
+  },
+  "hospitalDetail": {
+    "backToHospitals": "Back to Hospitals",
+    "hospitalInfo": "Hospital Information",
+    "availableDepartments": "Available Departments",
+    "locationDirections": "Location & Directions",
+    "findUsEasily": "Find us easily using the interactive map above for accurate directions to our hospital.",
+    "openInMaps": "Open in Maps",
+    "quickActions": "Quick Actions",
+    "emergencyInfo": "Emergency Information",
+    "emergencyCall": "For emergency services, please call:",
+    "doctorsAvailable": "Doctors Available",
+    "departments": "Departments",
+    "emergencyServices": "Emergency Services"
+  },
+  "doctors": {
+    "title": "Government Doctors",
+    "subtitle": "Qualified medical professionals serving across Karnataka's healthcare network",
+    "filterByHospital": "Filter by Hospital",
+    "filterByDepartment": "Filter by Department",
+    "allHospitals": "All Hospitals",
+    "allDepartments": "All Departments",
+    "experience": "years experience",
+    "qualification": "Qualification",
+    "specialization": "Specialization",
+    "opdDays": "OPD Days"
+  },
+  "timings": {
+    "title": "Hospital Timings",
+    "subtitle": "OPD schedules and availability across government hospitals",
+    "filterByHospital": "Filter by Hospital",
+    "allHospitals": "All Hospitals",
+    "selectDoctor": "Select Doctor",
+    "availableSlots": "Available Slots",
+    "bookAppointment": "Book Appointment",
+    "timeSlot": "Time Slot",
+    "type": "Type",
+    "available": "Available"
+  },
+  "admin": {
+    "login": "Admin Login",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "account": "Account",
+    "manageHospitals": "Manage Hospitals",
+    "manageDoctors": "Manage Doctors",
+    "manageSchedules": "Manage Schedules",
+    "manageFeedback": "Manage Feedback",
+    "addHospital": "Add Hospital",
+    "addDoctor": "Add Doctor",
+    "addSchedule": "Add Schedule",
+    "dashboardStats": {
+      "totalHospitals": "Total Hospitals",
+      "totalDoctors": "Total Doctors",
+      "totalFeedback": "Total Feedback",
+      "registeredDoctors": "Registered doctors in portal",
+      "hospitalsAvailable": "Hospitals available in network",
+      "citizenFeedback": "Citizen feedback submissions"
+    },
+    "hospitalForm": {
+      "name": "Name",
+      "location": "Location",
+      "taluk": "Taluk",
+      "selectTaluk": "Select Taluk",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "departments": "Departments (comma separated)",
+      "departmentsPlaceholder": "Cardiology, Pediatrics, Orthopedics",
+      "emergencyNumber": "Emergency Number",
+      "imageUrl": "Image URL",
+      "mapEmbedUrl": "Map Embed URL (optional)",
+      "mapPlaceholder": "Paste iframe src from Google Maps embed"
+    },
+    "doctorForm": {
+      "name": "Name",
+      "department": "Department",
+      "qualification": "Qualification",
+      "experience": "Experience (years)",
+      "hospital": "Hospital",
+      "phone": "Phone",
+      "email": "Email",
+      "specialization": "Specialization (comma separated)",
+      "opdDays": "OPD Days (comma separated)",
+      "imageUrl": "Image URL"
+    }
+  },
+  "feedback": {
+    "title": "Feedback",
+    "subtitle": "Share your experience and help us improve our services",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "submitFeedback": "Submit Feedback",
+    "thankYou": "Thank you for your feedback!",
+    "error": "Error submitting feedback. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2024 Government Healthcare Portal. All rights reserved.",
+    "description": "Karnataka Government Healthcare Services"
+  }
+}
