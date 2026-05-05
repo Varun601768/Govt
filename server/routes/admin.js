@@ -1,5 +1,4 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 
@@ -12,21 +11,33 @@ const Feedback = require('../models/Feedback');
 const router = express.Router();
 
 
-// 🔐 LOGIN
+// ======================
+// 🔐 ADMIN LOGIN
+// ======================
 router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
 
+    // Check input
+    if (!username || !password) {
+      return res.status(400).json({ message: 'Username and password required' });
+    }
+
+    // Find admin
     const admin = await Admin.findOne({ username, isActive: true });
+
     if (!admin) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
-    const isPasswordValid = await bcrypt.compare(password, admin.password);
-    if (!isPasswordValid) {
+    // Compare password (bcrypt)
+    const isMatch = await admin.comparePassword(password);
+
+    if (!isMatch) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
+    // Create token
     const token = jwt.sign(
       {
         id: admin._id,
@@ -54,7 +65,9 @@ router.post('/login', async (req, res) => {
 });
 
 
-// 🔐 VERIFY TOKEN
+// ======================
+// 🔒 VERIFY ADMIN TOKEN
+// ======================
 const verifyAdmin = (req, res, next) => {
   const token = req.header('Authorization')?.replace('Bearer ', '');
 
@@ -72,7 +85,9 @@ const verifyAdmin = (req, res, next) => {
 };
 
 
-// 🌱 SEED (FIXED)
+// ======================
+// 🌱 SEED DATA (IMPORTANT)
+// ======================
 router.post('/seed', async (req, res) => {
   try {
     await Hospital.deleteMany({});
@@ -80,19 +95,16 @@ router.post('/seed', async (req, res) => {
     await Schedule.deleteMany({});
     await Admin.deleteMany({});
 
-    // ✅ HASH PASSWORD
-    const hashedPassword = await bcrypt.hash('admin123', 10);
-
-    // ✅ CREATE ADMIN
-    await Admin.create({
+    // 🔥 Password will be hashed automatically (if model is correct)
+    const admin = new Admin({
       username: 'admin',
-      password: hashedPassword,
+      password: 'admin123',
       email: 'admin@hospital.gov.in',
-      role: 'admin',
-      isActive: true
+      role: 'admin'
     });
 
-    // ✅ CREATE HOSPITALS
+    await admin.save();
+
     const hospitals = await Hospital.insertMany([
       {
         name: 'Wenlock Hospital',
@@ -102,40 +114,31 @@ router.post('/seed', async (req, res) => {
         address: 'Hampankatta, Mangalore',
         emergency: '108',
         departments: ['Cardiology', 'Neurology'],
-        image: '',
-        mapUrl: ''
+        image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg'
       }
     ]);
 
-    // ✅ CREATE DOCTORS
     const doctors = await Doctor.insertMany([
       {
         name: 'Dr. Rajesh Kumar',
         department: 'Cardiology',
         qualification: 'MBBS, MD',
         experience: 10,
-        hospitalId: hospitals[0]._id,
-        phone: '9876543210',
-        email: 'doctor@gov.in',
-        specialization: ['Heart'],
-        opdDays: ['Monday'],
-        image: ''
+        hospitalId: hospitals[0]._id
       }
     ]);
 
-    // ✅ CREATE SCHEDULE
     await Schedule.insertMany([
       {
         doctorId: doctors[0]._id,
         dayOfWeek: 'Monday',
         startTime: '09:00',
         endTime: '12:00',
-        type: 'OPD',
-        isAvailable: true
+        type: 'OPD'
       }
     ]);
 
-    res.json({ message: 'Seed data created successfully' });
+    res.json({ message: 'Database seeded successfully' });
 
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -143,81 +146,140 @@ router.post('/seed', async (req, res) => {
 });
 
 
-// 🏥 HOSPITALS
+// ======================
+// 🏥 HOSPITAL APIs
+// ======================
 router.get('/hospitals', verifyAdmin, async (req, res) => {
-  const data = await Hospital.find();
-  res.json(data);
+  try {
+    const data = await Hospital.find().sort({ createdAt: -1 });
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 router.post('/hospitals', verifyAdmin, async (req, res) => {
-  const data = await Hospital.create(req.body);
-  res.json(data);
+  try {
+    const data = new Hospital(req.body);
+    await data.save();
+    res.status(201).json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.put('/hospitals/:id', verifyAdmin, async (req, res) => {
-  const data = await Hospital.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(data);
+  try {
+    const data = await Hospital.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.delete('/hospitals/:id', verifyAdmin, async (req, res) => {
-  await Hospital.findByIdAndDelete(req.params.id);
-  res.json({ message: 'Deleted' });
+  try {
+    await Hospital.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 
-// 👨‍⚕️ DOCTORS
+// ======================
+// 👨‍⚕️ DOCTOR APIs
+// ======================
 router.get('/doctors', verifyAdmin, async (req, res) => {
-  const data = await Doctor.find().populate('hospitalId');
-  res.json(data);
+  try {
+    const data = await Doctor.find().populate('hospitalId');
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 router.post('/doctors', verifyAdmin, async (req, res) => {
-  const data = await Doctor.create(req.body);
-  res.json(data);
+  try {
+    const data = new Doctor(req.body);
+    await data.save();
+    res.status(201).json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.put('/doctors/:id', verifyAdmin, async (req, res) => {
-  const data = await Doctor.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(data);
+  try {
+    const data = await Doctor.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.delete('/doctors/:id', verifyAdmin, async (req, res) => {
-  await Doctor.findByIdAndDelete(req.params.id);
-  res.json({ message: 'Deleted' });
+  try {
+    await Doctor.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 
-// 📅 SCHEDULES
+// ======================
+// 📅 SCHEDULE APIs
+// ======================
 router.get('/schedules', verifyAdmin, async (req, res) => {
-  const data = await Schedule.find().populate('doctorId');
-  res.json(data);
+  try {
+    const data = await Schedule.find().populate('doctorId');
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 router.post('/schedules', verifyAdmin, async (req, res) => {
-  const data = await Schedule.create(req.body);
-  res.json(data);
-});
-
-router.put('/schedules/:id', verifyAdmin, async (req, res) => {
-  const data = await Schedule.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(data);
+  try {
+    const data = new Schedule(req.body);
+    await data.save();
+    res.status(201).json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.delete('/schedules/:id', verifyAdmin, async (req, res) => {
-  await Schedule.findByIdAndDelete(req.params.id);
-  res.json({ message: 'Deleted' });
+  try {
+    await Schedule.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 
+// ======================
 // 💬 FEEDBACK
+// ======================
 router.post('/feedbacks', async (req, res) => {
-  const data = await Feedback.create(req.body);
-  res.json(data);
+  try {
+    const data = new Feedback(req.body);
+    await data.save();
+    res.status(201).json(data);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 router.get('/feedbacks', verifyAdmin, async (req, res) => {
-  const data = await Feedback.find();
-  res.json(data);
+  try {
+    const data = await Feedback.find().sort({ createdAt: -1 });
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 
