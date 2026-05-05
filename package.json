@@ -47,7 +47,9 @@
   "scripts": {
   "dev": "nodemon server.js",
   "start": "node server.js",
-    "build": "some command"
+    "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
 }
 
 }
