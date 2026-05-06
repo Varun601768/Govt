@@ -6,7 +6,7 @@ const Hospital = require('../models/Hospital');
 const Doctor = require('../models/Doctor');
 const Schedule = require('../models/Schedule');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hospital-management';
+const MONGODB_URI = process.env.MONGODB_URI || 'MONGODB_URI=mongodb+srv://username:4vp23mc033@cluster.mongodb.net/hospital-management ';
 
 async function seedDatabase() {
   try {
